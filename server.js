@@ -14,6 +14,6 @@ mongoose.connection.on('error', (err) => {
 });
 
 
-app.listen(config.default.port, () => {
+app.listen(config.default.port || 8080, () => {
   console.log(`listening on port: ${config.default.port}...`);
 });
