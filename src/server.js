@@ -13,7 +13,7 @@ mongoose.connection.on('error', (err) => {
   console.log(`unable to connect to database: ${err}`);
 });
 
-
-app.listen(config.default.port, () => {
-  console.log(`listening on port: ${config.default.port}...`);
+const port = process.env.PORT || config.default.port;
+app.listen(port, () => {
+  console.log(`listening on port: ${port}...`);
 });
